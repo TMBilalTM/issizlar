@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Issızlar - Resmi Website
 
-## Getting Started
+Modern Next.js TypeScript ile geliştirilmiş Issızlar müzik grubu resmi websitesi.
 
-First, run the development server:
+## 🎵 Özellikler
+
+- **Modern Tasarım**: Temiz, profesyonel ve kullanıcı dostu arayüz
+- **Scroll Animasyonları**: Framer Motion ile yumuşak geçişler ve parallax efektler
+- **Responsive Tasarım**: Tüm cihazlarda mükemmel görünüm
+- **Performans Odaklı**: Next.js 15 ve TypeScript ile optimize edilmiş kod
+- **Erişilebilirlik**: WCAG standartlarına uygun tasarım
+- **SEO Optimize**: Arama motorları için optimize edilmiş
+
+## 🛠 Teknoloji Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Dil**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animasyonlar**: Framer Motion
+- **İkonlar**: Lucide React
+- **UI Bileşenleri**: Radix UI
+- **Font**: Geist Sans & Geist Mono
+
+## 🚀 Kurulum
+
+Projeyi yerel makinenizde çalıştırmak için:
 
 ```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) adresinden siteyi görüntüleyebilirsiniz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Proje Yapısı
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global stiller
+│   ├── layout.tsx         # Ana layout
+│   └── page.tsx           # Ana sayfa
+├── components/            # React bileşenleri
+│   ├── Navigation.tsx     # Navigasyon menüsü
+│   ├── Hero.tsx          # Ana hero bölümü
+│   ├── About.tsx         # Hakkımızda bölümü
+│   ├── Music.tsx         # Müzik bölümü
+│   ├── Events.tsx        # Etkinlikler bölümü
+│   └── Contact.tsx       # İletişim bölümü
+└── ...
+```
 
-## Learn More
+## 🎨 Tasarım Prensipleri
 
-To learn more about Next.js, take a look at the following resources:
+- **Minimal Gradient Kullanımı**: Sade renkler ve ince gölgeler tercih edildi
+- **Okunabilirlik**: Yüksek kontrast oranları ile mükemmel metin okunabilirliği
+- **Kullanıcı Deneyimi**: Sezgisel navigasyon ve akıcı animasyonlar
+- **Modern Estetik**: Güncel tasarım trendleri ve clean kod yaklaşımı
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Geliştirme Komutları
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Geliştirme sunucusu
+npm run dev
 
-## Deploy on Vercel
+# Production build
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Production sunucusu
+npm start
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Lint kontrolü
+npm run lint
+```
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+
+## 🌟 Öne Çıkan Özellikler
+
+### Scroll Animasyonları
+- Sayfa kaydırma ile tetiklenen smooth animasyonlar
+- Parallax efektler ile derinlik hissi
+- Viewport'a göre optimize edilmiş animasyon timing'leri
+
+### Modern UI/UX
+- Glassmorphism tasarım elementleri
+- Hover efektleri ve micro-interactions
+- Accessible color palette ve typography
+
+### Performance
+- Next.js Image optimization
+- Code splitting ve lazy loading
+- SEO ve Core Web Vitals optimize edilmiş
+
+## 📄 Lisans
+
+Bu proje Issızlar müzik grubu için özel olarak geliştirilmiştir.
+
+---
+
+**Issızlar** - Ruhun derinliklerinden gelen melodiler 🎵
