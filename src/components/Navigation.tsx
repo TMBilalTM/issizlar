@@ -16,11 +16,11 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const navItems = [
     { href: "#home", label: "Ana Sayfa" },
     { href: "#about", label: "Hakkımızda" },
     { href: "#music", label: "Müzik" },
+    { href: "#members", label: "Grup Üyeleri" },
     { href: "#events", label: "Etkinlikler" },
     { href: "#contact", label: "İletişim" },
   ];
