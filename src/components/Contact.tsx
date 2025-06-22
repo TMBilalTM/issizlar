@@ -171,15 +171,14 @@ export function Contact() {
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors duration-200 resize-none"
                     placeholder="Mesajınızı buraya yazın..."
                   />
-                </div>
-                  <motion.button
+                </div>                  <motion.button
                   type="submit"
                   whileHover={{ 
                     scale: 1.05,
                     y: -2,
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 font-medium group overflow-hidden"
+                  className="relative w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 font-medium group overflow-hidden cursor-pointer"
                 >
                   {/* Button background effects */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -212,14 +211,13 @@ export function Contact() {
               <h3 className="text-2xl font-bold text-white mb-6 font-display">İletişim Bilgileri</h3>
               
               <div className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <motion.a
+                {contactInfo.map((item, index) => (                  <motion.a
                     key={item.title}
                     href={item.link}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center gap-4 p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
+                    className="flex items-center gap-4 p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group cursor-pointer"
                   >
                     <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center group-hover:bg-blue-600/30 transition-colors duration-200">
                       <item.icon className="w-6 h-6 text-blue-400" />

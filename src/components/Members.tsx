@@ -245,40 +245,37 @@ export function Members() {
                     </p>
                       {/* Social Links */}
                     <div className="flex items-center gap-2 sm:gap-3">
-                      {member.social.instagram && (
-                        <motion.a
+                      {member.social.instagram && (                        <motion.a
                           href={member.social.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1, rotate: 5 }}
                           whileTap={{ scale: 0.9 }}
-                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-pink-500/20 rounded-lg flex items-center justify-center transition-colors duration-300"
+                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-pink-500/20 rounded-lg flex items-center justify-center transition-colors duration-300 cursor-pointer"
                         >
                           <Instagram className="w-3 h-3 sm:w-4 sm:h-4 text-slate-300 hover:text-pink-400 transition-colors" />
                         </motion.a>
                       )}
                       
-                      {member.social.twitter && (
-                        <motion.a
+                      {member.social.twitter && (                        <motion.a
                           href={member.social.twitter}
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1, rotate: -5 }}
                           whileTap={{ scale: 0.9 }}
-                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-blue-500/20 rounded-lg flex items-center justify-center transition-colors duration-300"
+                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-blue-500/20 rounded-lg flex items-center justify-center transition-colors duration-300 cursor-pointer"
                         >
                           <Twitter className="w-3 h-3 sm:w-4 sm:h-4 text-slate-300 hover:text-blue-400 transition-colors" />
                         </motion.a>
                       )}
                       
-                      {member.social.spotify && (
-                        <motion.a
+                      {member.social.spotify && (                        <motion.a
                           href={member.social.spotify}
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1, rotate: 5 }}
                           whileTap={{ scale: 0.9 }}
-                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-green-500/20 rounded-lg flex items-center justify-center transition-colors duration-300"
+                          className="w-6 h-6 sm:w-8 sm:h-8 bg-slate-600/50 hover:bg-green-500/20 rounded-lg flex items-center justify-center transition-colors duration-300 cursor-pointer"
                         >
                           <Music className="w-3 h-3 sm:w-4 sm:h-4 text-slate-300 hover:text-green-400 transition-colors" />
                         </motion.a>
@@ -323,11 +320,10 @@ export function Members() {
           </h3>
           <p className="text-slate-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
             Profesyonel müzik projeleri için işbirliği fırsatları ve etkinlik rezervasyonları.
-          </p>
-          <motion.button
+          </p>          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25 text-sm sm:text-base"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25 text-sm sm:text-base cursor-pointer"
           >
             İletişime Geçin
           </motion.button>

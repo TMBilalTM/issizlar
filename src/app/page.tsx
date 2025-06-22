@@ -8,7 +8,7 @@ import { Navigation } from "@/components/Navigation";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950">      <Navigation />
+    <main className="min-h-screen">      <Navigation />
       <Hero />
       <About />
       <Music />

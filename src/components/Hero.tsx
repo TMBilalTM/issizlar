@@ -66,14 +66,13 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <motion.button
+          >            <motion.button
               whileHover={{ 
                 scale: 1.05,
                 y: -2,
               }}
               whileTap={{ scale: 0.95 }}
-              className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 overflow-hidden group"
+              className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 overflow-hidden group cursor-pointer"
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:animate-pulse"></div>
@@ -88,15 +87,13 @@ export function Hero() {
                 <Play size={20} />
               </motion.div>
               <span className="relative z-10">Müziklerimizi Dinle</span>
-            </motion.button>
-
-            <motion.button
+            </motion.button>            <motion.button
               whileHover={{ 
                 scale: 1.05,
                 y: -2,
               }}
               whileTap={{ scale: 0.95 }}
-              className="relative border border-slate-600 hover:border-slate-400 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 hover:bg-slate-800/50 backdrop-blur-sm group overflow-hidden"
+              className="relative border border-slate-600 hover:border-slate-400 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 hover:bg-slate-800/50 backdrop-blur-sm group overflow-hidden cursor-pointer"
             >
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

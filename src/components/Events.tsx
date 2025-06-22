@@ -370,11 +370,10 @@ export function Events() {
                       <div className="flex items-center justify-between">
                         <div className="text-blue-400 font-bold">
                           {event.ticketPrice}
-                        </div>
-                        <motion.button
+                        </div>                        <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 cursor-pointer"
                         >
                           <Ticket className="w-4 h-4" />
                           Detay
@@ -425,11 +424,10 @@ export function Events() {
                         <div className="flex flex-col md:flex-row md:items-end md:justify-between">
                           <p className="text-slate-400 mb-4 md:mb-0 md:mr-4 flex-1">
                             {event.description}
-                          </p>
-                          <motion.button
+                          </p>                          <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 md:flex-shrink-0"
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 md:flex-shrink-0 cursor-pointer"
                           >
                             <Ticket className="w-4 h-4" />
                             Detayları Gör
@@ -470,11 +468,10 @@ export function Events() {
           </h3>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Yeni konser ve etkinlik duyurularını kaçırmamak için bültenimize abone olun.
-          </p>
-          <motion.button
+          </p>          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25 cursor-pointer"
           >
             Bültene Abone Ol
           </motion.button>
