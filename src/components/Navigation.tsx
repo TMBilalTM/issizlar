@@ -53,14 +53,13 @@ export function Navigation() {  const [isOpen, setIsOpen] = useState(false);
     { href: "#events", label: "Etkinlikler", id: "events" },
     { href: "#contact", label: "İletişim", id: "contact" },
   ];
-
   return (
     <>      {/* Mobile Menu Button - Always visible on mobile, outside navbar */}
       <motion.div 
         className="md:hidden fixed z-[100]"
-        animate={{
-          top: "1rem",
-          right: "1rem"
+        style={{
+          top: scrolled ? '8px' : '12px',
+          left: 'calc(100vw - 52px)', // Viewport width eksi buton genişliği eksi margin
         }}
         transition={{ duration: 0.3 }}
       >        <motion.button
@@ -71,36 +70,95 @@ export function Navigation() {  const [isOpen, setIsOpen] = useState(false);
             setIsOpen(!isOpen);
           }}
           className={`
-            text-white p-3 cursor-pointer rounded-xl border transition-all duration-300 relative
+            text-white cursor-pointer rounded-lg border transition-all duration-300 relative
             ${scrolled 
-              ? 'bg-black/30 backdrop-blur-md border-white/30 shadow-lg' 
-              : 'bg-black/20 backdrop-blur-sm border-white/20'
+              ? 'bg-black/40 backdrop-blur-md border-white/30 shadow-lg' 
+              : 'bg-black/25 backdrop-blur-sm border-white/25'
             }
           `}
-          style={{ pointerEvents: 'auto' }}
-        >          <motion.div
+          style={{ 
+            width: '40px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0',
+            margin: '0',
+            boxSizing: 'border-box'
+          }}
+        ><motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
+            className="flex items-center justify-center"
+            style={{
+              width: '18px',
+              height: '18px'
+            }}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
           </motion.div>
         </motion.button>
-      </motion.div>
-
-      <motion.nav
+      </motion.div>      <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "top-0"
-          : "top-0"
-      }`}
-    >
-      <div className={`
+        transition={{ duration: 0.6 }}
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "top-0"
+            : "top-0"
+        }`}
+      >      <div className={`
         max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-500
         ${scrolled ? 'py-1' : 'py-0'}
       `}>
+        {/* Mobile Menu Button - Container içinde güvenli */}
+        <motion.div 
+          className="md:hidden absolute z-[100]"
+          style={{
+            top: scrolled ? '8px' : '12px',
+            right: '8px',
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setIsOpen(!isOpen);
+            }}
+            className={`
+              text-white cursor-pointer rounded-lg border transition-all duration-300 relative
+              ${scrolled 
+                ? 'bg-black/40 backdrop-blur-md border-white/30 shadow-lg' 
+                : 'bg-black/25 backdrop-blur-sm border-white/25'
+              }
+            `}
+            style={{ 
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '0',
+              margin: '0',
+              boxSizing: 'border-box'
+            }}
+          >
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center justify-center"
+              style={{
+                width: '18px',
+                height: '18px'
+              }}
+            >
+              {isOpen ? <X size={18} /> : <Menu size={18} />}
+            </motion.div>
+          </motion.button>
+        </motion.div>
+
         <div className={`
           flex items-center h-16 transition-all duration-500
           ${scrolled 

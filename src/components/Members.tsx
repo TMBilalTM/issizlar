@@ -107,11 +107,11 @@ export function Members() {
     },
     {
       id: 8,
-      name: "Boş",
-      role: "Boş",
-      instrument: "Boş",
-      bio: "Boş",
-      image: "/logos/main_logo.jpg",
+      name: "Poyraz Ceylan",
+      role: "Ritim Gitar",
+      instrument: "Ritim Gitar",
+      bio: "Grubun ritim gitaristi. Akustik ve elektrik gitar performanslarıyla grubun melodik yapısını güçlendiriyor. Türk rock müziğine yeni bir soluk getiriyor.",
+      image: "/team/poyraz.jpg",
       social: {
 
       },

@@ -304,7 +304,7 @@ export function Contact() {
           className="mt-16 pt-8 border-t border-slate-800 text-center"
         >
           <p className="text-slate-400">
-            © 2025 Issızlar. Tüm hakları saklıdır. Made with ♪ in Turkey.
+            © 2025 Issızlar. Tüm hakları saklıdır. Made with ♪ in Cyprus.
           </p>
           <p className="text-slate-400 mt-2">
             Developed By{" "}
