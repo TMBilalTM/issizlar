@@ -74,12 +74,8 @@ export function Contact() {
       color: "hover:text-green-400"
     }
   ];
-
   return (
-    <section id="contact" ref={ref} className="py-20 bg-slate-950 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950"></div>
-      
+    <section id="contact" ref={ref} className="py-20 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

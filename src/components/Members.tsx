@@ -153,12 +153,8 @@ export function Members() {
       }
     }
   };
-
   return (
-    <section id="members" ref={ref} className="py-12 sm:py-16 lg:py-20 bg-slate-800 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
-      
+    <section id="members" ref={ref} className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>

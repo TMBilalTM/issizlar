@@ -14,13 +14,13 @@ export function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
-
-  return (
-    <section ref={ref} id="home" className="relative h-screen overflow-hidden">      {/* Background with parallax effect */}
+  return (    <header ref={ref} id="home" className="relative h-screen overflow-hidden" role="banner">
+      {/* Background with parallax effect */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"
-      >        {/* Background Logo */}
+        className="absolute inset-0"
+        aria-hidden="true"
+      >{/* Background Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
           animate={{ opacity: 1, scale: 1, rotate: -15 }}
@@ -29,7 +29,7 @@ export function Hero() {
         >
           <div className="relative w-80 h-80 opacity-8 select-none pointer-events-none">
             <Image
-              src="/logos/main_logo.jpg"
+              src="/logos/main_logo2.png"
               alt="Issızlar Background Logo"
               fill
               className="object-cover rounded-full filter grayscale"
@@ -39,13 +39,13 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      <div className="relative z-10 h-full flex items-center justify-center">        <div className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Main Title */}          <motion.h1
+      <div className="relative z-10 h-full flex items-center justify-center">        <div className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">          {/* Main Title */}          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-6xl md:text-8xl font-bold text-white mb-6 font-display"
             style={{ fontFamily: "var(--font-playfair), serif" }}
+            itemProp="name"
           >
             <span className="block">Issızlar</span>
           </motion.h1>
@@ -56,11 +56,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed"
+            itemProp="description"
           >
             Ruhun derinliklerinden gelen melodiler,
             <br />
             kalbin sessizliğinde yankılanan şarkılar
-          </motion.p>          {/* Action Buttons */}
+          </motion.p>{/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,6 +74,8 @@ export function Hero() {
               }}
               whileTap={{ scale: 0.95 }}
               className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 overflow-hidden group cursor-pointer"
+              aria-label="Müziklerimizi dinlemek için müzik bölümüne git"
+              onClick={() => document.getElementById('music')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:animate-pulse"></div>
@@ -94,6 +97,8 @@ export function Hero() {
               }}
               whileTap={{ scale: 0.95 }}
               className="relative border border-slate-600 hover:border-slate-400 text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 hover:bg-slate-800/50 backdrop-blur-sm group overflow-hidden cursor-pointer"
+              aria-label="Grup hakkında bilgi almak için hakkımızda bölümüne git"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -206,8 +211,7 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center"
-        >
+          className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center"        >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
@@ -215,6 +219,6 @@ export function Hero() {
           />
         </motion.div>
       </motion.div>
-    </section>
+    </header>
   );
 }

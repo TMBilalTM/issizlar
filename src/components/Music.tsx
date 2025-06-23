@@ -45,38 +45,36 @@ export function Music() {
     } else {
       setPlayingTrack(trackIndex);
     }
-  };
-
-  return (    <section id="music" ref={ref} className="py-20 relative overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        {/* Section Header */}
-        <motion.div
+  };  return (
+    <section id="music" ref={ref} className="py-20 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{/* Section Header */}        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >          <h2 className="text-5xl md:text-6xl font-bold mb-6 font-display text-white">
+          className="text-center mb-12 md:mb-20"
+        >          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 font-display text-white">
             Müziklerimiz
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed px-4">
             Ruhun derinliklerinden çıkan melodiler, kalbin en samimi anlarını
             ifade eden şarkılarımızı keşfedin.
           </p>
           
           {/* Decorative elements */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-6 md:mt-8 gap-2">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
             <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse delay-300"></div>
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-700"></div>
           </div>
         </motion.div>        {/* Albums Grid */}
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {albums.map((album, albumIndex) => (
             <motion.div
               key={album.id}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: albumIndex * 0.3 }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
             >
               {/* Album Cover & Info */}
               <div className={`${albumIndex % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -137,51 +135,48 @@ export function Music() {
                       {/* Glowing edge effect */}
                     <div className="absolute inset-0 rounded-3xl bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                   </div>
-                </motion.div>
-
-                <motion.div 
-                  className="mt-8 text-center lg:text-left"
+                </motion.div>                <motion.div 
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: albumIndex * 0.3 + 0.3 }}
-                >                  <h3 className="text-4xl font-bold mb-3 font-display text-white">
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}                  transition={{ duration: 0.6, delay: albumIndex * 0.3 + 0.3 }}
+                  className="mt-6 md:mt-8 text-center lg:text-left px-4 lg:px-0"
+                ><h3 className="text-3xl md:text-4xl font-bold mb-3 font-display text-white">
                     {album.title}
                   </h3>
                   <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-                    <span className="text-blue-400 text-lg font-medium">{album.year}</span>
+                    <span className="text-blue-400 text-base md:text-lg font-medium">{album.year}</span>
                     <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
-                    <span className="text-slate-400 text-lg">{album.tracks.length} Şarkı</span>
+                    <span className="text-slate-400 text-base md:text-lg">{album.tracks.length} Şarkı</span>
                   </div>
-                  <p className="text-slate-300 leading-relaxed text-lg">{album.description}</p>
+                  <p className="text-slate-300 leading-relaxed text-base md:text-lg">{album.description}</p>
                   
                   {/* Album stats */}
-                  <div className="flex items-center justify-center lg:justify-start gap-6 mt-6">
+                  <div className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 mt-6">
                     <div className="text-center">
-                      <div className="text-white font-bold text-lg">15.2K</div>
-                      <div className="text-slate-400 text-sm">Dinlenme</div>
+                      <div className="text-white font-bold text-base md:text-lg">15.2K</div>
+                      <div className="text-slate-400 text-xs md:text-sm">Dinlenme</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-white font-bold text-lg">892</div>
-                      <div className="text-slate-400 text-sm">Beğeni</div>
+                      <div className="text-white font-bold text-base md:text-lg">892</div>
+                      <div className="text-slate-400 text-xs md:text-sm">Beğeni</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-white font-bold text-lg">4.8</div>
-                      <div className="text-slate-400 text-sm">Puan</div>
+                      <div className="text-white font-bold text-base md:text-lg">4.8</div>
+                      <div className="text-slate-400 text-xs md:text-sm">Puan</div>
                     </div>
                   </div>
                 </motion.div>
               </div>              {/* Track List */}
               <div className={`${albumIndex % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <motion.div 
-                  className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500"
+                  className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-8 border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="flex items-center justify-between mb-8">
-                    <h4 className="text-2xl font-bold text-white font-display">Şarkı Listesi</h4>
-                    <div className="flex items-center gap-2 text-slate-400">
-                      <span className="text-sm">{album.tracks.length} şarkı</span>
-                      <div className="w-1 h-1 bg-slate-400 rounded-full"></div>
-                      <span className="text-sm">19 dk</span>
+                  <div className="flex items-center justify-between mb-6 md:mb-8">
+                    <h4 className="text-xl md:text-2xl font-bold text-white font-display">Şarkı Listesi</h4>
+                    <div className="flex items-center gap-2 text-slate-400 text-xs md:text-sm">
+                      <span>{album.tracks.length} şarkı</span>
+                      <div className="w-1 h-1 bg-slate-400 rounded-full hidden sm:block"></div>
+                      <span className="hidden sm:block">19 dk</span>
                     </div>
                   </div>
                   
@@ -190,22 +185,21 @@ export function Music() {
                       const globalTrackIndex = albumIndex * 10 + trackIndex;
                       const isPlaying = playingTrack === globalTrackIndex;
                       
-                      return (
-                        <motion.div
+                      return (                        <motion.div
                           key={trackIndex}
                           initial={{ opacity: 0, x: -20 }}
                           animate={isInView ? { opacity: 1, x: 0 } : {}}
                           transition={{ duration: 0.5, delay: albumIndex * 0.3 + trackIndex * 0.1 }}
-                          whileHover={{ x: 8, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
-                          className="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10"
+                          whileHover={{ x: 4, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
+                          className="flex items-center justify-between p-3 md:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10"
                           onClick={() => handlePlayPause(globalTrackIndex)}
                         >
-                          <div className="flex items-center gap-4 flex-1">
+                          <div className="flex items-center gap-3 md:gap-4 flex-1">
                             {/* Track number / Play button */}
-                            <div className="w-12 h-12 flex items-center justify-center">
+                            <div className="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center">
                               <motion.div
                                 className={`
-                                  w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer
+                                  w-8 md:w-10 h-8 md:h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer
                                   ${isPlaying 
                                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' 
                                     : 'bg-white/10 text-slate-300 group-hover:bg-blue-600/20 group-hover:text-blue-400'
@@ -215,71 +209,70 @@ export function Music() {
                                 whileTap={{ scale: 0.9 }}
                               >
                                 {isPlaying ? (
-                                  <Pause size={16} />
+                                  <Pause size={14} />
                                 ) : (
-                                  <span className="text-sm font-medium group-hover:hidden">
+                                  <span className="text-xs md:text-sm font-medium group-hover:hidden">
                                     {trackIndex + 1}
                                   </span>
                                 )}
                                 {!isPlaying && (
-                                  <Play size={16} className="hidden group-hover:block ml-0.5" />
+                                  <Play size={14} className="hidden group-hover:block ml-0.5" />
                                 )}
                               </motion.div>
                             </div>
                             
                             {/* Track info */}
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-medium text-lg group-hover:text-blue-100 transition-colors duration-200 truncate">
+                              <div className="text-white font-medium text-base md:text-lg group-hover:text-blue-100 transition-colors duration-200 truncate">
                                 {track.name}
                               </div>
-                              <div className="text-slate-400 text-sm mt-1">Issızlar</div>
+                              <div className="text-slate-400 text-xs md:text-sm mt-1">Issızlar</div>
                             </div>
                             
                             {/* Duration */}
-                            <div className="text-slate-400 text-sm font-mono">
+                            <div className="text-slate-400 text-xs md:text-sm font-mono">
                               {track.duration}
                             </div>
                           </div>
                           
                           {/* Action buttons */}
-                          <div className="flex items-center gap-2 ml-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <div className="flex items-center gap-1 md:gap-2 ml-2 md:ml-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="p-2 text-slate-400 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 cursor-pointer"
+                              className="p-1.5 md:p-2 text-slate-400 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 cursor-pointer"
                             >
-                              <Download size={16} />
+                              <Download size={12} className="md:w-4 md:h-4" />
                             </motion.button>
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="p-2 text-slate-400 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 cursor-pointer"
+                              className="p-1.5 md:p-2 text-slate-400 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 cursor-pointer"
                             >
-                              <ExternalLink size={16} />
+                              <ExternalLink size={12} className="md:w-4 md:h-4" />
                             </motion.button>
                           </div>
                         </motion.div>
                       );
                     })}
                   </div>
-                  
-                  {/* Album actions */}
-                  <div className="flex items-center gap-4 mt-8 pt-6 border-t border-white/10">
+                    {/* Album actions */}
+                  <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 mt-6 md:mt-8 pt-6 border-t border-white/10">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25 cursor-pointer"
+                      className="w-full sm:flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 md:px-6 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25 cursor-pointer text-sm md:text-base"
                     >
                       Tüm Albümü Çal
                     </motion.button>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 border border-white/20 cursor-pointer"
+                      className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white py-3 px-4 md:px-6 rounded-xl font-medium transition-all duration-300 border border-white/20 cursor-pointer text-sm md:text-base"
                     >
                       Favorilere Ekle
                     </motion.button>
-                  </div>                </motion.div>
+                  </div></motion.div>
               </div>
             </motion.div>
           ))}
@@ -288,21 +281,21 @@ export function Music() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-32"
+          className="mt-16 md:mt-32"
         >
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-white mb-4 font-display">Müziklerimizi Dinleyin</h3>
-            <p className="text-slate-300 text-lg">Favori müzik platformunuzdan şarkılarımıza ulaşabilirsiniz</p>
+          <div className="text-center mb-12 md:mb-16 px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 font-display">Müziklerimizi Dinleyin</h3>
+            <p className="text-slate-300 text-base md:text-lg">Favori müzik platformunuzdan şarkılarımıza ulaşabilirsiniz</p>
           </div>          {/* Enhanced Platform Grid */}
-          <div className="relative overflow-hidden bg-slate-800/30 backdrop-blur-2xl rounded-3xl py-16 border border-white/10 shadow-2xl">
-            {/* Simple overlays */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-slate-900/90 z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-32 bg-slate-900/90 z-10 pointer-events-none"></div>
+          <div className="relative overflow-hidden bg-slate-800/30 backdrop-blur-2xl rounded-3xl py-12 md:py-16 border border-white/10 shadow-2xl">
+            {/* Simple overlays - mobile responsive */}
+            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-slate-900/90 z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-slate-900/90 z-10 pointer-events-none"></div>
 
             <motion.div
-              className="flex items-center gap-8 scrolling-platforms-enhanced"
+              className="flex items-center gap-4 md:gap-8 scrolling-platforms-enhanced"
               style={{ width: "max-content" }}
-            >              {[
+            >{[
                 { 
                   name: "Spotify", 
                   logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg",
@@ -401,24 +394,23 @@ export function Music() {
                   textColor: "text-blue-400",
                   users: "1.2M+"
                 },
-              ]).map((platform, index) => (
-                <motion.div
+              ]).map((platform, index) => (                <motion.div
                   key={`${platform.name}-${index}`}
                   className="flex-shrink-0 group/platform"
-                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileHover={{ scale: 1.03, y: -3 }}
                 >                  <div className={`
-                    relative w-48 h-40 ${platform.bgColor}
-                    rounded-2xl flex flex-col items-center justify-center 
+                    relative w-32 sm:w-40 md:w-48 h-28 sm:h-32 md:h-40 ${platform.bgColor}
+                    rounded-xl md:rounded-2xl flex flex-col items-center justify-center 
                     transition-all duration-500 cursor-pointer
                     border border-white/20 hover:border-white/40
                     backdrop-blur-xl shadow-xl ${platform.color}
                     group-hover/platform:shadow-2xl
                   `}>                    {/* Animated background */}
-                    <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 group-hover/platform:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-white/10 opacity-0 group-hover/platform:opacity-100 transition-opacity duration-500"></div>
                     
                     {/* Platform Logo */}
                     <motion.div 
-                      className="w-12 h-12 mb-3 flex items-center justify-center group-hover/platform:scale-110 transition-transform duration-300 z-10"
+                      className="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 mb-2 md:mb-3 flex items-center justify-center group-hover/platform:scale-110 transition-transform duration-300 z-10"
                       whileHover={{ rotate: 5 }}
                     >
                       <Image 
@@ -431,59 +423,59 @@ export function Music() {
                     </motion.div>
                     
                     {/* Platform name */}
-                    <div className={`text-sm font-bold ${platform.textColor} group-hover/platform:text-white transition-colors duration-300 text-center px-2 z-10`}>
+                    <div className={`text-xs sm:text-sm font-bold ${platform.textColor} group-hover/platform:text-white transition-colors duration-300 text-center px-2 z-10`}>
                       {platform.name}
                     </div>
                     
-                    {/* User count */}
-                    <div className="text-xs text-slate-400 mt-1 z-10">
+                    {/* User count - hidden on very small screens */}
+                    <div className="text-xs text-slate-400 mt-1 z-10 hidden sm:block">
                       {platform.users} kullanıcı
-                    </div>
-                      {/* Hover effect overlay */}
-                    <div className="absolute inset-0 rounded-2xl bg-black/20 opacity-0 group-hover/platform:opacity-100 transition-opacity duration-300"></div>
+                    </div>                    {/* Hover effect overlay */}
+                    <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-black/20 opacity-0 group-hover/platform:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
           </div>
           
-          {/* Enhanced Call to action */}
-          <motion.div 
-            className="text-center mt-12"
+          {/* Enhanced Call to action */}          <motion.div 
+            className="text-center mt-8 md:mt-12 px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.2 }}
-          >            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          >            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-2xl hover:shadow-blue-500/30 cursor-pointer"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium transition-all duration-300 shadow-2xl hover:shadow-blue-500/30 cursor-pointer text-sm md:text-base"
               >
                 🎵 Tüm Platformlarda Dinle
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 border border-white/20 hover:border-white/40 cursor-pointer"
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium transition-all duration-300 border border-white/20 hover:border-white/40 cursor-pointer text-sm md:text-base"
               >
                 📱 Mobil Uygulamalar
               </motion.button>
             </div>
             
             {/* Stats */}
-            <div className="flex items-center justify-center gap-8 mt-8 text-sm text-slate-400">
+            <div className="flex items-center justify-center gap-4 md:gap-8 mt-6 md:mt-8 text-xs md:text-sm text-slate-400">
               <div className="text-center">
-                <div className="text-white font-bold text-lg">8.5M+</div>
-                <div>Toplam Dinlenme</div>
+                <div className="text-white font-bold text-base md:text-lg">8.5M+</div>
+                <div className="hidden sm:block">Toplam Dinlenme</div>
+                <div className="sm:hidden">Dinlenme</div>
               </div>
-              <div className="w-px h-8 bg-slate-600"></div>
+              <div className="w-px h-6 md:h-8 bg-slate-600"></div>
               <div className="text-center">
-                <div className="text-white font-bold text-lg">25K+</div>
-                <div>Aylık Dinleyici</div>
+                <div className="text-white font-bold text-base md:text-lg">25K+</div>
+                <div className="hidden sm:block">Aylık Dinleyici</div>
+                <div className="sm:hidden">Dinleyici</div>
               </div>
-              <div className="w-px h-8 bg-slate-600"></div>
+              <div className="w-px h-6 md:h-8 bg-slate-600"></div>
               <div className="text-center">
-                <div className="text-white font-bold text-lg">12</div>
+                <div className="text-white font-bold text-base md:text-lg">12</div>
                 <div>Platform</div>
               </div>
             </div>

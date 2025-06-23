@@ -170,12 +170,8 @@ export function Events() {
     { value: "name", label: "İsme Göre" },
     { value: "location", label: "Şehre Göre" }
   ];
-
   return (
-    <section id="events" ref={ref} className="py-20 bg-slate-900 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      
+    <section id="events" ref={ref} className="py-20 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

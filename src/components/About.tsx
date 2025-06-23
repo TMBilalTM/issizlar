@@ -25,11 +25,8 @@ export function About() {
       description: "Kendimize has tarzımızla, müziğin evrensel dilinde özgün hikayeler anlatıyoruz.",
     },
   ];
-
   return (
-    <section id="about" ref={ref} className="py-20 bg-slate-900 relative overflow-hidden">      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-
+    <section id="about" ref={ref} className="py-20 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
