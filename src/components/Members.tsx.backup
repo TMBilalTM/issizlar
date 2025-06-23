@@ -37,85 +37,93 @@ export function Members() {
     },
     {
       id: 2,
-      name: "Lara Bostancı",
-      role: "Backvocal",
-      instrument: "Vokal & Perkusyon",
-      bio: "Güçlü vokal desteği ve çeşitli perkusyon aletleri ile grubun ses zenginliğini artırıyor.",
-      image: "/team/lara.jpg",
+      name: "Elif Demir",
+      role: "Vokal & Klavye",
+      instrument: "Piyano & Synthesizer",
+      bio: "Konservatuar mezunu. Klasik müzik eğitimi almış, pop ve rock tarzlarında kendini geliştirmiş.",
+      image: "/api/placeholder/300/400",
       social: {
+        instagram: "https://instagram.com/elifdemir",
+        spotify: "https://open.spotify.com/artist/elifdemir"
       },
-      joinDate: "2025"
+      joinDate: "2020"
     },
     {
       id: 3,
-      name: "Ada Yüzerçetin",
-      role: "Backvocal",
-      instrument: "Vokal & Perkusyon",
-      bio: "Güçlü vokal desteği ve çeşitli perkusyon aletleri ile grubun ses zenginliğini artırıyor.",
-      image: "/team/ada.jpg",
+      name: "Murat Özkan",
+      role: "Bass Gitar",
+      instrument: "4 & 5 String Bass",
+      bio: "Grubun ritim bölümünün kalbi. Jazz geçmişi olan deneyimli bir bas gitarist.",
+      image: "/api/placeholder/300/400",
       social: {
-        instagram: "https://instagram.com/ada_yuzerctn",
+        instagram: "https://instagram.com/muratbass"
       },
-      joinDate: "2025"
+      joinDate: "2019"
     },
     {
       id: 4,
-      name: "Fevziye Nur Atalay",
-      role: "Ukulele",
-      instrument: "Ukulele",
-      bio: "Ukulele virtüözü. Grubun melodik dokusuna farklı bir tat katıyor. Akustik ve elektronik müzikteki yetkinliği ile dikkat çekiyor.",
-      image: "/team/karim.jpg",
+      name: "Can Yılmaz",
+      role: "Davul",
+      instrument: "Akustik & Elektronik Davul",
+      bio: "Enerjik ve dinamik davul performansları ile tanınan, çeşitli müzik türlerinde deneyimli.",
+      image: "/api/placeholder/300/400",
       social: {
+        twitter: "https://twitter.com/canyilmaz",
+        spotify: "https://open.spotify.com/artist/canyilmaz"
       },
-      joinDate: "2025"
+      joinDate: "2021"
     },
     {
       id: 5,
-      name: "Ali Üçüz",
-      role: "Lead Guitar",
-      instrument: "Elektro Gitar & Solo",
-      bio: "Grubun gitaristi ve solo performanslarıyla dikkat çekiyor. Modern rock tınılarını geleneksel Türk melodileriyle harmanlıyor.",
-      image: "/team/aliucuz.jpg",
+      name: "Zeynep Arslan",
+      role: "Keman & Viyola",
+      instrument: "Elektro & Akustik Keman",
+      bio: "Klasik müzik eğitimi almış, rock ve pop müziğine keman ile farklı bir boyut katıyor.",
+      image: "/api/placeholder/300/400",
       social: {
-
+        instagram: "https://instagram.com/zeynepviolin",
+        spotify: "https://open.spotify.com/artist/zeyneparslan"
       },
-      joinDate: "2025"
+      joinDate: "2022"
     },
     {
       id: 6,
-      name: "Alperen Acar",
-      role: "Bass",
-      instrument: "Bas Gitar",
-      bio: "",
-      image: "/team/alperenoc.jpg",
+      name: "Emre Kara",
+      role: "Lead Gitar",
+      instrument: "Elektro Gitar & Solo",
+      bio: "Teknik gitar becerileri ve solo performansları ile grupta önemli bir yere sahip.",
+      image: "/api/placeholder/300/400",
       social: {
-
+        instagram: "https://instagram.com/emreguitarist",
+        twitter: "https://twitter.com/emrekara"
       },
-      joinDate: "2025"
+      joinDate: "2021"
     },
     {
       id: 7,
-      name: "Mehmet Aşıksoy",
-      role: "Bateri",
-      instrument: "Bateri & Perküsyon",
-      bio: "Grubun ritim kalbi. Dinamik bateri performanslarıyla sahnede enerjiyi yükseltiyor. Rock ve alternatif müzikteki deneyimiyle dikkat çekiyor.",
-      image: "/team/mehmet.jpg",
+      name: "Selin Öztürk",
+      role: "Backup Vokal",
+      instrument: "Vokal & Perkusyon",
+      bio: "Güçlü vokal desteği ve çeşitli perkusyon aletleri ile grubun ses zenginliğini artırıyor.",
+      image: "/api/placeholder/300/400",
       social: {
-
+        instagram: "https://instagram.com/selinvocals",
+        spotify: "https://open.spotify.com/artist/selinozturk"
       },
-      joinDate: "2025"
+      joinDate: "2023"
     },
     {
       id: 8,
-      name: "Boş",
-      role: "Boş",
-      instrument: "Boş",
-      bio: "Boş",
-      image: "/logos/main_logo.jpg",
+      name: "Barış Tunç",
+      role: "Prodüktör & Klavye",
+      instrument: "Synthesizer & Studio",
+      bio: "Grubun ses teknisyeni ve prodüktörü. Stüdyo çalışmalarında ve canlı performanslarda teknik destek sağlıyor.",
+      image: "/api/placeholder/300/400",
       social: {
-
+        twitter: "https://twitter.com/barisproducer",
+        spotify: "https://open.spotify.com/artist/baristunc"
       },
-      joinDate: "2025"
+      joinDate: "2022"
     }
   ];
 
@@ -195,19 +203,7 @@ export function Members() {
                 <div className="relative z-10">                  {/* Member Image */}
                   <div className="aspect-[3/4] sm:aspect-[3/4] bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
-                    <img
-  src={member.image}
-  alt={member.name}
-  className="w-full h-full object-cover"
-  onError={(e) => {
-    e.currentTarget.style.display = 'none';
-    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-    if (fallback) fallback.classList.remove('hidden');
-  }}
-/>
-<div className="absolute inset-0 flex items-center justify-center hidden">
-  <div className="text-4xl sm:text-6xl lg:text-8xl text-white/20">👤</div>
-</div>
+                      <div className="text-4xl sm:text-6xl lg:text-8xl text-white/20">👤</div>
                     </div>
                     
                     {/* Overlay */}
