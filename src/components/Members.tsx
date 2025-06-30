@@ -86,7 +86,7 @@ export function Members() {
       name: "Alperen Acar",
       role: "OE",
       instrument: "BOŞ ELEMAN (OE)",
-      bio: "Grubun boş elemanı, sahne arkasında bizi eğlendirir.",
+      bio: "Grubun boş elemanı, sahne arkasında bizi eğlendirir. SAÇINI SİKTİĞİM",
       image: "/team/alperenoc.jpg",
       social: {
 
