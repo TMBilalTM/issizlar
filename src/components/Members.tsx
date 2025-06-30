@@ -84,9 +84,9 @@ export function Members() {
     {
       id: 6,
       name: "Alperen Acar",
-      role: "Bass",
-      instrument: "Bas Gitar",
-      bio: "",
+      role: "OE",
+      instrument: "BOŞ ELEMAN",
+      bio: "Grubun boş elemanı, sahne arkasında bizi eğlendirir.",
       image: "/team/alperenoc.jpg",
       social: {
 
