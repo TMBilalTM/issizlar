@@ -85,7 +85,7 @@ export function Members() {
       id: 6,
       name: "Alperen Acar",
       role: "OE",
-      instrument: "BOŞ ELEMAN",
+      instrument: "BOŞ ELEMAN (OE)",
       bio: "Grubun boş elemanı, sahne arkasında bizi eğlendirir.",
       image: "/team/alperenoc.jpg",
       social: {
