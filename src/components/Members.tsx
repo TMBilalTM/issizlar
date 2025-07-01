@@ -35,42 +35,9 @@ export function Members() {
       },
       joinDate: "2025"
     },
+
     {
       id: 2,
-      name: "Lara Bostancı",
-      role: "Backvocal",
-      instrument: "Vokal & Perkusyon",
-      bio: "Güçlü vokal desteği ve çeşitli perkusyon aletleri ile grubun ses zenginliğini artırıyor.",
-      image: "/team/lara.jpg",
-      social: {
-      },
-      joinDate: "2025"
-    },
-    {
-      id: 3,
-      name: "Ada Yüzerçetin",
-      role: "Backvocal",
-      instrument: "Vokal & Perkusyon",
-      bio: "Güçlü vokal desteği ve çeşitli perkusyon aletleri ile grubun ses zenginliğini artırıyor.",
-      image: "/team/ada.jpg",
-      social: {
-        instagram: "https://instagram.com/ada_yuzerctn",
-      },
-      joinDate: "2025"
-    },
-    {
-      id: 4,
-      name: "Fevziye Nur Atalay",
-      role: "Ukulele",
-      instrument: "Ukulele",
-      bio: "Ukulele virtüözü. Grubun melodik dokusuna farklı bir tat katıyor. Akustik ve elektronik müzikteki yetkinliği ile dikkat çekiyor.",
-      image: "/team/karim.jpg",
-      social: {
-      },
-      joinDate: "2025"
-    },
-    {
-      id: 5,
       name: "Ali Üçüz",
       role: "Lead Guitar",
       instrument: "Elektro Gitar & Solo",
@@ -81,20 +48,9 @@ export function Members() {
       },
       joinDate: "2025"
     },
-    {
-      id: 6,
-      name: "Alperen Acar",
-      role: "OE",
-      instrument: "BOŞ ELEMAN (OE)",
-      bio: "Grubun boş elemanı, sahne arkasında bizi eğlendirir. SAÇINI SİKTİĞİM",
-      image: "/team/alperenoc.jpg",
-      social: {
 
-      },
-      joinDate: "2025"
-    },
     {
-      id: 7,
+      id: 3,
       name: "Mehmet Aşıksoy",
       role: "Bateri",
       instrument: "Bateri & Perküsyon",
@@ -106,7 +62,7 @@ export function Members() {
       joinDate: "2025"
     },
     {
-      id: 8,
+      id: 4,
       name: "Poyraz Ceylan",
       role: "Ritim Gitar",
       instrument: "Ritim Gitar",
