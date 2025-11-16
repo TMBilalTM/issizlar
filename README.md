@@ -99,10 +99,5 @@ npm run lint
 - Code splitting ve lazy loading
 - SEO ve Core Web Vitals optimize edilmiş
 
-## 📄 Lisans
-
-Bu proje Issızlar müzik grubu için özel olarak geliştirilmiştir.
-
 ---
 
-**Issızlar** - Ruhun derinliklerinden gelen melodiler 🎵
